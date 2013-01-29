@@ -1,0 +1,90 @@
+//
+//  jumpMeterLayer.h
+//  Untitled
+//
+//  Created by harry on 22/09/09.
+//  Copyright 2009 __MyCompanyName__. All rights reserved.
+//
+
+#import <Foundation/Foundation.h>
+#import "cocos2d.h"
+#import "oxyMeterLayer.h"
+#import "creditMeterLayer.h"
+
+#define JUMPMETER_UIBACKGROUND_IPHONE_X -5.0f
+#define JUMPMETER_UIBACKGROUND_IPHONE_Y 287.0f
+#define JUMPMETER_HANGMETER_IPHONE_X 21.0f
+#define JUMPMETER_HANGMETER_IPHONE_Y 290.0f
+#define JUMPMETER_CREDITSCOUNTERLABEL_IPHONE_X 100.0f
+#define JUMPMETER_CREDITSCOUNTERLABEL_IPHONE_Y 307.0f
+#define JUMPMETER_LIVESCOUNTERLABEL_IPHONE_X 445.0f
+#define JUMPMETER_LIVESCOUNTERLABEL_IPHONE_Y 292.0f
+#define JUMPMETER_CREDITSIMG_IPHONE_X 370.0f
+#define JUMPMETER_CREDITSIMG_IPHONE_Y 295.0f
+#define JUMPMETER_LIVESIMG_IPHONE_X 420.0f
+#define JUMPMETER_LIVESIMG_IPHONE_Y 290.0f
+#define JUMPMETER_OXYMETER_IPHONE_X 10.0f
+#define JUMPMETER_OXYMETER_IPHONE_Y 185.0f
+#define JUMPMETER_BESTSCORE_IPHONE_X 310.0f
+#define JUMPMETER_BESTSCORE_IPHONE_Y 307.0f
+
+
+#define JUMPMETER_UIBACKGROUND_IPAD_X -5.0f
+#define JUMPMETER_UIBACKGROUND_IPAD_Y 287.0f
+#define JUMPMETER_HANGMETER_IPAD_X -540.0f
+#define JUMPMETER_HANGMETER_IPAD_Y 730.0f
+#define JUMPMETER_CREDITSCOUNTERLABEL_IPAD_X 250.0f
+#define JUMPMETER_CREDITSCOUNTERLABEL_IPAD_Y 739.0f
+#define JUMPMETER_LIVESCOUNTERLABEL_IPAD_X 445.0f
+#define JUMPMETER_LIVESCOUNTERLABEL_IPAD_Y 732.0f
+#define JUMPMETER_CREDITSIMG_IPAD_X 220.0f
+#define JUMPMETER_CREDITSIMG_IPAD_Y 735.0f
+#define JUMPMETER_LIVESIMG_IPAD_X 420.0f
+#define JUMPMETER_LIVESIMG_IPAD_Y 730.0f
+#define JUMPMETER_OXYMETER_IPAD_X -530.0f
+#define JUMPMETER_OXYMETER_IPAD_Y 650.0f
+
+#define JUMPMETER_BESTSCORE_IPAD_X -100.0f
+#define JUMPMETER_BESTSCORE_IPAD_Y 739.0f
+
+
+
+@interface jumpMeterLayer : Layer {
+	AtlasSpriteManager *hangMgr_jump1;
+	AtlasSpriteManager *hangMgr_jump2;
+	AtlasSpriteManager *hangMgr_jump3;
+	AtlasSpriteManager *hangMgr_none;
+	
+	
+	AtlasSprite *hangMeter_jump1;
+	AtlasSprite *hangMeter_jump2;
+	AtlasSprite *hangMeter_jump3;
+	AtlasSprite *hangMeter_none;
+	LabelAtlas  *creditsCounterLabel;
+	LabelAtlas  *bestScoreLabel;
+	LabelAtlas  *livesCounterLabel;
+	
+	float JUMPMETER_UIBACKGROUND_X;
+	float JUMPMETER_UIBACKGROUND_Y;
+	float JUMPMETER_HANGMETER_X;
+	float JUMPMETER_HANGMETER_Y;
+	float JUMPMETER_CREDITSCOUNTERLABEL_X;
+	float JUMPMETER_CREDITSCOUNTERLABEL_Y;
+	float JUMPMETER_LIVESCOUNTERLABEL_X;
+	float JUMPMETER_LIVESCOUNTERLABEL_Y;
+	float JUMPMETER_CREDITSIMG_X;
+	float JUMPMETER_CREDITSIMG_Y;
+	float JUMPMETER_LIVESIMG_X;
+	float JUMPMETER_LIVESIMG_Y;
+	float JUMPMETER_OXYMETER_X;
+	float JUMPMETER_OXYMETER_Y;
+	
+	float JUMPMETER_BESTSCORE_X;
+	float JUMPMETER_BESTSCORE_Y;
+	int current_state;
+	
+	Layer *pauseLayer;
+	
+}
+
+@end
